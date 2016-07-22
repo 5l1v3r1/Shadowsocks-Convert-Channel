@@ -1,0 +1,7 @@
+{
+    "server":"23.105.200.135",
+    "server_port":28582,
+    "local_port":1030,
+    "password":"pwd",
+    "timeout":600
+}
