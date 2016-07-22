@@ -128,7 +128,7 @@ cd到PythonServer目录中
 `python localAesEncry.py`
 
 ##效果呈现
-![代理模型图](./绘图3通道总揽.png)
+![代理模型图](./blob/master/绘图3通道总揽.png)
 ##[1] 隐蔽通道方法一
 - POST报文或者Cookie字段中添加
 	客户端向服务端传送隐蔽信息，常使用的是向Cookie中添加一项的方法。一般情况下Cookie类似如下：
@@ -142,22 +142,22 @@ If-Modified-Since: Wed, 04 May 2016 09:59:21 GMT
 	
 	**效果图**
 	>客户端向服务端发送的密文:
-![Alt text](./Untitled.png)
+![Alt text](./blob/master/Untitled.png)
 		>已经添加隐蔽数据的数据报文截图为:
-![Alt text](./Untitled1.png)
+![Alt text](./blob/master//Untitled1.png)
 		>服务端接收到隐蔽数据，并经过解密，还原出原始数据
-![Alt text](./Untitled2.png)
+![Alt text](./blob/master/Untitled2.png)
 
 ##[2]隐蔽通道方法二
 - 由于服务端发送的是客户机请求的响应报文，因此，服务端给客户端传送隐蔽信息可以自己构造响应报文，然后把构造的响应报文嵌入隐蔽数据，发给客户端。当发送数据报文时，可以使用HTTP网页上最经常使用的图片，音频，或者以压缩格式传输的数据包。如果每次都只发送固定的响应报文给客户端，那么很容易被检测与发现。因此本论文使用了动态抓取网站链接的方式，并随机变换图片，音频，压缩包构建待发送的数据报文，这样使网页流量看起来更像真实的数据报文。
 	>发送给客户端的隐蔽信息
-![Alt text](./1469215535432.png)
+![Alt text](./blob/master/Untitled3.png)
 	>加入隐蔽信息的图片数据报文
-![Alt text](./1469215574856.png)
+![Alt text](./blob/master/Untitled4.png)
 	>客户端接收到服务端发来的数据报文：
-![Alt text](./1469215610419.png)
+![Alt text](./blob/master/Untitled5.png)
 	>客户端接收到隐蔽数据信息并还原解密：
-![Alt text](./1469215645891.png)
+![Alt text](./blob/master/Untitled7.png)
 
 ##总结
 - 本文也只是在原有shadowsocks-lighter的源码基础上，加了一层对网页数据包修改的动作，也许可以达到对传输数据的保护作用，仅用于科学实验。制作过程中熟悉了Python语言。特别感谢尹老师给我的指导，您把循循善诱教书育人这两个词体现的淋漓尽致，非常感谢尹老师在大学给予的引导与教育。
