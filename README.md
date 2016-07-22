@@ -41,7 +41,8 @@ pip install requests
 
 - [1]   
 在客户端代理程序中ProxyClient中找到config.json
-内容如下
+内容如下:
+```json
 	{
 		"server":"192.168.29.29",    //服务端的IP地址
 		"server_port":8086,             //服务端的代理端口号
@@ -49,13 +50,13 @@ pip install requests
 		"password":"pwd",              //共享的密码
 		"timeout":600                     //超时时长
 	}
-
+```
 一般只修改服务端的IP地址就可以跑起来了。
 
 ------------
 - [2] 
 服务端ProxyServer 端,同样也有这样的配置文件
-
+```python
 	{
 	    "server":"127.0.0.1",
 	    "server_port":8086,
@@ -63,6 +64,7 @@ pip install requests
 	    "password":"pwd",
 	    "timeout":600
 	}
+```
 服务端默认配置可以不修改，如果客户端修改了，服务端一样也要修改。
 
 ----
