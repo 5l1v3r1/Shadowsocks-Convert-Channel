@@ -3,7 +3,9 @@
 --------
 Based on a Covert Channel of shadowsocks-lighter
 
+
 [TOC]
+
 
 ##项目介绍
 -----
@@ -41,11 +43,11 @@ pip install requests
 在客户端代理程序中ProxyClient中找到config.json
 内容如下
 	{
-			"server":"192.168.29.29",    //服务端的IP地址
-		    "server_port":8086,             //服务端的代理端口号
-		    "local_port":1030,              //本地服务的端口号
-		    "password":"pwd",              //共享的密码
-		    "timeout":600                     //超时时长
+		"server":"192.168.29.29",    //服务端的IP地址
+		"server_port":8086,             //服务端的代理端口号
+		"local_port":1030,              //本地服务的端口号
+		"password":"pwd",              //共享的密码
+		"timeout":600                     //超时时长
 	}
 
 一般只修改服务端的IP地址就可以跑起来了。
