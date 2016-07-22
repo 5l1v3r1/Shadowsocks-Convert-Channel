@@ -1,3 +1,5 @@
+#以下是原先作者shadowsocks-lighter的readme.md，并未删除
+
 shadowsocks
 ===========
 
